@@ -43,7 +43,7 @@ class CategorieController extends AbstractController
 
         if (!$categorie) {
             throw $this->createNotFoundException(
-                'id not found' . $id
+                'No id found  ' . $id
             );
         }
         $request = Request::createFromGlobals();
@@ -60,12 +60,12 @@ class CategorieController extends AbstractController
 
         if (!$categorie) {
             throw $this->createNotFoundException(
-                'id not found' . $id
+                'No id found ' . $id
             );
         }
 
         $entityManager->remove($categorie);
         $entityManager->flush();
-        return $this->json("Delete successful");
+        return $this->json("User deleted Successfully");
     }
 }
