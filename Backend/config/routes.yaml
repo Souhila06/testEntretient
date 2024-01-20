@@ -1,0 +1,24 @@
+article:
+  path: "/api/categories"
+  controller: App\Controller\CategorieController::index
+  methods: ["GET"]
+
+article_show:
+  path: "/api/categories/{id}"
+  controller: App\Controller\CategorieController::show
+  methods: ["GET"]
+
+article_create:
+  path: "/api/categories"
+  controller: App\Controller\CategorieController::create
+  methods: ["POST"]
+
+article_update:
+  path: "/api/categories/{id}"
+  controller: App\Controller\CategorieController::update
+  methods: ["PUT"]
+
+article_delete:
+  path: "/api/categories/{id}"
+  controller: App\Controller\CategorieController::delete
+  methods: ["DELETE"]
