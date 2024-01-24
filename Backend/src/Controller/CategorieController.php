@@ -21,11 +21,13 @@ class CategorieController extends AbstractController
         $categorie = $entityManager->getRepository(Categorie::class)->findAll();
         return $this->json($categorie);
     }
+
     public function show(EntityManagerInterface $entityManager, $id): JsonResponse
     {
         $categorie = $entityManager->getRepository(Categorie::class)->find($id);
         return $this->json($categorie);
     }
+    
     public function create(EntityManagerInterface $entityManager): JsonResponse
     {
         $categorie = new Categorie();
